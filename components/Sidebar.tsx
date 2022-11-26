@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NextPage } from 'next';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai';
 import { ImCancelCircle } from 'react-icons/im';
@@ -13,7 +12,7 @@ const Sidebar = () => {
 
   const userProfile = false;
 
-  const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded';
+  const normalLink = "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded";
   return (
     <div>
         <div
@@ -36,14 +35,6 @@ const Sidebar = () => {
                         </div>
                     </Link>
                 </div>
-                {!userProfile &&(
-                    <div className="px-2 py-4 hidden xl:block">
-                        <p className="text-gray-400">Log in to like and comment on videos</p>
-                        <div className="pr-4">
-                            
-                        </div>
-                    </div>
-                )}
 
                 <Discover />
                 <SuggestedAccounts />
